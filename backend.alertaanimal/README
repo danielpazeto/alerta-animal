@@ -1,0 +1,2 @@
+//Gretty plugin, plugin to run web apps with gradle
+./gradlew jettyRun

@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">
+    jdbc:mysql://localhost:3306/alertaanimal</property>
+    <property name="hibernate.connection.username">pazeto</property>
+    <property name="hibernate.connection.password">ju2004</property>
+    <property name="hibernate.connection.pool_size">10</property>
+    <property name="show_sql">true</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <!--<property name="hibernate.enable_lazy_load_no_trans">true</property>-->
+    <property name="hibernate.hbm2ddl.auto">create</property>
+
+
+    <mapping class="pazeto.alertaanimal.DTO.Animal"/>
+    <mapping class="pazeto.alertaanimal.DTO.User"/>
+    <mapping class="pazeto.alertaanimal.DTO.Alert"/>
+
+   </session-factory>
+</hibernate-configuration>

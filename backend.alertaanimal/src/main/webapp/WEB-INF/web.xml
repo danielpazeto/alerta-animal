@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <servlet>
+        <display-name>AnimalServlet</display-name>
+        <servlet-name>AnimalServlet</servlet-name>
+        <servlet-class>pazeto.alertaanimal.Servlets.AnimalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AnimalServlet</servlet-name>
+        <url-pattern>/animal/list</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <display-name>AlertServlet</display-name>
+        <servlet-name>AlertServlet</servlet-name>
+        <servlet-class>pazeto.alertaanimal.Servlets.AlertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AlertServlet</servlet-name>
+        <url-pattern>/alert/list</url-pattern>
+        <url-pattern>/alert/save</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <display-name>UserServlet</display-name>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>pazeto.alertaanimal.Servlets.UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <!--<url-pattern>/user/list</url-pattern>-->
+        <url-pattern>/user/login</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>

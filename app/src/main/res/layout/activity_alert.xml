@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pazeto.apps.alertaanimal.ui.AlertActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/add_filter_btn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_label_choose_animal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/what_is_the_animal" />
+
+            <Spinner
+                android:id="@+id/animal_chooser_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_label_choose_animal"
+                android:spinnerMode="dialog" />
+
+            <ImageView
+                android:id="@+id/mapPreview"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/animal_chooser_dropdown" />
+
+            <EditText
+                android:id="@+id/alert_comment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/mapPreview"
+                android:hint="Deixe um comentário sobre o alerta."
+                android:lines="1"
+                android:maxLines="1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_alert_anonymous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alert_comment"
+                android:text='Enviar anonimamente?' />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/add_filter_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/send_alert" />
+
+</RelativeLayout>
